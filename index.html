@@ -1,22 +1,37 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Bizim Kitabımız</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>For You</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="book">
+<div id="intro" class="intro">
+  <h1>Before you continue...</h1>
+  <p>This is not just a book.</p>
+  <button onclick="start()">Begin</button>
+</div>
 
-  <div id="page" class="page">
-    <h1 id="title">Hazır mısın?</h1>
-    <p id="text">Sana küçük bir şey hazırladım...</p>
+<div id="book" class="book hidden">
+
+  <audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="click">
+    <source src="click.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="frame fade" id="frame">
+    <img id="img" src="pages/1.png">
   </div>
 
-  <div class="buttons">
-    <button onclick="prevPage()">Geri</button>
-    <button onclick="nextPage()">İleri</button>
+  <div class="controls">
+    <button onclick="prev()">◀</button>
+    <button onclick="toggleMusic()">♫</button>
+    <button onclick="next()">▶</button>
   </div>
 
 </div>
