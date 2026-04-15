@@ -68,3 +68,14 @@ function toggleMusic() {
   if (music.paused) music.play();
   else music.pause();
 }
+function checkCode() {
+  const code = document.getElementById("codeInput").value;
+
+  if (code === "love2026") {
+
+    document.getElementById("gate").style.display = "none";
+
+  } else {
+    alert("Wrong code");
+  }
+}
